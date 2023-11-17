@@ -695,7 +695,7 @@ BOOL keepAvAudioSessionAlwaysActive = NO;
                 avPlayer = nil;
             }
             if (! keepAvAudioSessionAlwaysActive && self.avSession && ! [self isPlayingOrRecording]) {
-                [self.avSession setCategory:AVAudioSessionCategorySoloAmbient error:nil];
+                [self.avSession setCategory:AVAudioSessionCategoryAmbient error:nil];
                 [self.avSession setActive:NO error:nil];
                 self.avSession = nil;
             }
